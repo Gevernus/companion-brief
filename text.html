@@ -10,7 +10,7 @@ code{background:var(--card);padding:1px 5px;border-radius:4px;font-size:.88em}
 .tw{overflow-x:auto;margin:12px 0}table{border-collapse:collapse;font-size:14px;min-width:100%}th,td{border:1px solid var(--line);padding:6px 8px;vertical-align:top;text-align:left}th{background:var(--card)}
 li{margin:3px 0}.chart{margin:16px 0;padding:16px;background:var(--card);border-radius:10px}.chart figcaption{font-weight:600}.chart figcaption span{display:block;font-weight:400;font-size:13px;color:var(--muted)}
 .legend{display:flex;gap:14px;flex-wrap:wrap;font-size:13px;color:var(--muted);margin:8px 0}.legend i{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:5px}</style></head>
-<body><nav><a href="#plan">План созвона</a><a href="#features">Голос и экран: у них и у нас</a><a href="#games">Для каких игр просят</a><a href="#gena">Как устроен «Гена»</a></nav><main><section id="plan"><h1>Созвон с инвестором Сашей, 11.11.2026: план разговора</h1>
+<body><nav><a href="#plan">План созвона</a><a href="#features">Голос и экран: у них и у нас</a><a href="#prices">Цены конкурентов</a><a href="#games">Для каких игр просят</a><a href="#gena">Как устроен «Гена»</a></nav><main><section id="plan"><h1>Созвон с инвестором Сашей, 11.11.2026: план разговора</h1>
 <p>Черновик плана: что ему важно знать и на каких цифрах. У каждой цифры есть источник:</p>
 <ul>
 <li><strong>[замер]</strong> — мерили сами;</li>
@@ -922,6 +922,211 @@ document.getElementById('c').innerHTML=h})()</script>
 </ul>
 </li>
 </ol>
+</section><section id="prices"><h1>Цены конкурентов: что продают, сколько минут и почём (11.11.2026)</h1>
+<p>Сведено из разборов 10–11.11: <code>competitors-features-2026-11-11/*.md</code> (код клиентов, открытые API, страницы цен). Метки: [код] — из кода или открытого JSON; [док] — сайт или стор; [отзывы] — со слов пользователей. «$ за час при полном лимите» — цена тарифа, делённая на все часы голоса, которые он даёт за месяц (30 дней); это нижняя граница цены часа: кто использует меньше, платит за час дороже.</p>
+<h2>Сводная таблица</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Продукт</th>
+<th>Тариф</th>
+<th>$ в месяц</th>
+<th>Что входит</th>
+<th>$ за час голоса при полном лимите</th>
+<th>Источник</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Hakko</td>
+<td>Free</td>
+<td>0</td>
+<td>30 мин звонка в день, 2 100 кредитов в неделю, без зрения</td>
+<td>—</td>
+<td>[код] vip_dashboard</td>
+</tr>
+<tr>
+<td>Hakko</td>
+<td>Pro</td>
+<td>9,99</td>
+<td>120 мин в день (до 60 ч), зрение и реплики по экрану, 5 600 кр. в неделю + 6 000 в месяц</td>
+<td><strong>0,17</strong></td>
+<td>[код]</td>
+</tr>
+<tr>
+<td>Hakko</td>
+<td>Ultra</td>
+<td>19,99</td>
+<td>без лимита звонка, зрение, 16 800 кр. в месяц; сообщения всё равно за кредиты</td>
+<td>0,33 при 60 ч</td>
+<td>[код]</td>
+</tr>
+<tr>
+<td>Questie</td>
+<td>пробник</td>
+<td>0</td>
+<td>1 сессия со всем, без карты</td>
+<td>—</td>
+<td>[код]</td>
+</tr>
+<tr>
+<td>Questie</td>
+<td>Adventurer</td>
+<td>19,99</td>
+<td>500 кредитов ≈ 25 ч; авто-реплика стоит кредит</td>
+<td><strong>0,80</strong></td>
+<td>[код]</td>
+</tr>
+<tr>
+<td>Questie</td>
+<td>Champion</td>
+<td>49,99 (39,99 первый месяц)</td>
+<td>1 750 кр. ≈ 85 ч, HD-зрение, клон голоса</td>
+<td>0,59</td>
+<td>[код]</td>
+</tr>
+<tr>
+<td>Questie</td>
+<td>Legend</td>
+<td>149,99 (119,99)</td>
+<td>7 500 кр. ≈ 375 ч, Party Mode</td>
+<td>0,40</td>
+<td>[код]</td>
+</tr>
+<tr>
+<td>Sidekick AI</td>
+<td>Free</td>
+<td>0</td>
+<td>10 мин в день, время идёт и в тишине</td>
+<td>—</td>
+<td>[док]</td>
+</tr>
+<tr>
+<td>Sidekick AI</td>
+<td>Pro</td>
+<td>~10</td>
+<td>90 мин в день (до 45 ч), зрение</td>
+<td>0,22</td>
+<td>[отзывы]: на сайте цены нет</td>
+</tr>
+<tr>
+<td>Rudy</td>
+<td>пробник</td>
+<td>0</td>
+<td>3 минуты один раз</td>
+<td>—</td>
+<td>[код]</td>
+</tr>
+<tr>
+<td>Rudy</td>
+<td>Starter</td>
+<td>4,99 (1,99 первый месяц)</td>
+<td><strong>30 мин в месяц</strong>, тишина в звонке тоже считается</td>
+<td><strong>9,98</strong></td>
+<td>[код]</td>
+</tr>
+<tr>
+<td>Rudy</td>
+<td>Plus</td>
+<td>9,99</td>
+<td>90 мин в месяц; Big Brain списывает ×3</td>
+<td>6,66</td>
+<td>[код]</td>
+</tr>
+<tr>
+<td>Rudy</td>
+<td>докупка</td>
+<td>4,99</td>
+<td>15 мин</td>
+<td>19,96</td>
+<td>[код]</td>
+</tr>
+<tr>
+<td>OP.GG Agent</td>
+<td>бесплатно</td>
+<td>0</td>
+<td>агент + 2 голоса, реклама за награду</td>
+<td>—</td>
+<td>[код]</td>
+</tr>
+<tr>
+<td>OP.GG Agent</td>
+<td>голос стримера</td>
+<td>19,99 за каждый голос</td>
+<td>без лимита матчей, без рекламы</td>
+<td>—</td>
+<td>[код]</td>
+</tr>
+<tr>
+<td>N.E.K.O.</td>
+<td>бесплатно</td>
+<td>0</td>
+<td>весь ИИ (Gemini Live за рубежом), квота не публикуется; голос рвётся через 90 с тишины, у части отваливается через ~2 ч</td>
+<td>0</td>
+<td>[код]; [отзывы]</td>
+</tr>
+<tr>
+<td>Trophi</td>
+<td>Free / Trophi+</td>
+<td>0 / 9,90</td>
+<td>текст, без голоса: 15 ответов в месяц / «unlimited» с fair use</td>
+<td>—</td>
+<td>[док]</td>
+</tr>
+<tr>
+<td>GGQ (LoL)</td>
+<td>Playing Coach</td>
+<td>₩3 900 ≈ 2,8</td>
+<td>коуч и оверлей в LoL</td>
+<td>—</td>
+<td>[код]</td>
+</tr>
+<tr>
+<td>AikoMate</td>
+<td>кредиты</td>
+<td>—</td>
+<td>дневные кредиты урезали с 30 (≈3 фразы) до 5</td>
+<td>—</td>
+<td>[отзывы]</td>
+</tr>
+<tr>
+<td>ResoAI (Dota)</td>
+<td>полный доступ</td>
+<td>30 разово</td>
+<td>«на каждые $5 дохода тратили $30–35 на API»</td>
+<td>—</td>
+<td>[обзор]</td>
+</tr>
+<tr>
+<td>Backseat AI (закрыт 31.12.2024)</td>
+<td>персонаж</td>
+<td>4,99 за персонажа</td>
+<td>серверы дороже выручки</td>
+<td>—</td>
+<td>[док]</td>
+</tr>
+</tbody>
+</table></div>
+<h2>Что видно</h2>
+<ol>
+<li><strong>Три модели цены.</strong>
+<ul>
+<li>Лимит минут в день и подписка: Hakko, Sidekick. Час при полном лимите — $0,17–0,22, но средний платящий выбирает малую часть лимита.</li>
+<li>Пакет кредитов на месяц: Questie. Час — $0,40–0,80, ровно на уровне нашей себестоимости голоса на Inworld или ElevenLabs.</li>
+<li>Дорогие минуты: Rudy — $6,7–20 за час. Это цена «звонка с персонажем», а не напарника на весь вечер.</li>
+</ul>
+</li>
+<li><strong>Hakko Pro при полном лимите продаёт час за $0,17 — это наша себестоимость своего синтеза без зрения ($0,16).</strong> Держится на том, что модели свои и почти никто не выбирает лимит (см. <code>competitors-features-2026-11-11/hakko.md</code>, «Экономика Ultra»).</li>
+<li><strong>Бесплатные тарифы режут.</strong> Sidekick: 3 захвата → 30 мин → 10 мин в день за три месяца; AikoMate: 30 → 5 кредитов в день; Trophi пишет прямо: «AI is the most expensive part».</li>
+<li><strong>Почти у всех время идёт и в тишине</strong> (Rudy, Sidekick, N.E.K.O. рвёт сессию). Ругают именно за это.</li>
+</ol>
+<h2>Что это значит для нашего тарифа $6,99</h2>
+<ul>
+<li>Себестоимость часа у нас: свой синтез $0,16 + кадры по событию $0,02 = <strong>$0,18</strong>; на Inworld — <strong>$0,40</strong>.</li>
+<li>Чистыми с платящего при доле SB 30% — $4,65. Безубыточный лимит: <strong>~25 ч в месяц</strong> на своём синтезе (≈50 мин в день), <strong>~11 ч</strong> на Inworld.</li>
+<li>Без пола сервера своего синтеза (~$172 в месяц на всех: +$1,79 на человека при 96 платящих, +$0,36 при 480). С ним при 96 платящих безубыточно ~15 ч.</li>
+<li>Hakko Pro даёт до 120 мин в день за $9,99; мы на своём синтезе можем дать ~50 мин в день за $6,99, и это в плюс только если средний платящий выбирает меньше половины. Минуты считать по речи питомца, а не по времени звонка: тишина бесплатна (ругают как раз за обратное).</li>
+</ul>
 </section><section id="games"><h1>Для каких игр хотят ИИ-напарника — комментарии YouTube, 11.11.2026</h1>
 <h2>Метод</h2>
 <ul>

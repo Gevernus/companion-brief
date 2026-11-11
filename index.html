@@ -76,6 +76,7 @@ ul.tight b{color:var(--ink)}
 .R,.Cr,.Li,.Go,.Bl,.Ho{--ink:var(--c-ink);--ink2:var(--c-ink);--mute:var(--c-ink);--pink:var(--c-crim);--line:var(--c-ink);color:var(--c-ink)}
 .R ul.tight li:before,.Cr ul.tight li:before,.Li ul.tight li:before,.Go ul.tight li:before,.Bl ul.tight li:before{background:var(--c-crim)}
 .rv .fx{grid-template-columns:150px 1fr}.rv .fx b{font-size:28px;white-space:nowrap}
+.g3 .fx{grid-template-columns:1fr;gap:8px}
 .foot{width:1204px;margin-top:40px;font-size:15px;color:var(--mute)}.foot a{color:var(--c-rose)}
 </style></head><body>
 <div id="pan"><span id="num">01</span><div id="pt"></div></div><div id="bar"></div><div id="tip"></div>
@@ -177,6 +178,7 @@ ul.tight b{color:var(--ink)}
   <table>
     <tr><th style="width:30%">вариант</th><th class="n1" style="width:12%">$ за час разговора</th><th class="n1" style="width:13%">первый звук</th><th style="padding-left:24px">плюсы и минусы</th></tr>
     <tr class="pk"><td><b>A. Цепочка + свой синтез</b> (TeraTTS на нашем CPU)</td><td class="n1">$0,16</td><td class="n1">1,5–1,8 с</td><td style="padding-left:24px">дешевле всех; сервер ~$172 в месяц нужен круглосуточно; голос проще ElevenLabs</td></tr>
+    <tr><td><b>A+. То же + кэш Gemini</b> — самый дешёвый облачный</td><td class="n1">≈ $0,05</td><td class="n1">1,5–1,8 с</td><td style="padding-left:24px">кэш снимает ~$0,11 в час с LLM; <b>не замерен</b> (в замере 08.11 кэш = 0) — расчёт</td></tr>
     <tr><td><b>B. Цепочка + Inworld Flash</b></td><td class="n1">$0,38</td><td class="n1">1,5–1,8 с</td><td style="padding-left:24px">без своего сервера, расход падает вместе с активностью</td></tr>
     <tr><td><b>C. Цепочка + ElevenLabs Turbo</b></td><td class="n1">$0,76</td><td class="n1">1,5–1,8 с</td><td style="padding-left:24px">лучший голос в слепом тесте (8 из 10); обычный день на 20K убыточен</td></tr>
     <tr><td><b>D. Gemini Live, речь в речь</b></td><td class="n1">≈ $0,62</td><td class="n1">0,6–1,0 с</td><td style="padding-left:24px">быстрее всех; только голоса Gemini; платим и за тишину; выдумывает на тёмном кадре</td></tr>
@@ -237,6 +239,35 @@ ul.tight b{color:var(--ink)}
   <div class="lg"><span><i class="Go"></i>помещается в $6,99 при доле SB 30% (чистыми $4,65)</span><span><i class="Li"></i>помещается в $14,99 при доле SB 30% (чистыми $9,97)</span><span><i class="Ho"></i>не помещается</span></div>
   </div></div>
   <div class="src">Допущения: 10 ч разговора и 60 ч игры в месяц на платящего; 20 реплик в час по 65 знаков, когда питомец комментирует сам. Голос без кэша Gemini (замер 08.11), фоновое зрение — расчёт. Свой синтез требует ещё сервер ~$172 в месяц на всех: +$1,79 на человека при 96 платящих, +$0,36 при 480. Hakko продаёт набор 4 за $9,99 — значит, их кадр сильно дешевле нашей оценки или часов меньше; их сервер не виден.</div>
+</section>
+
+<!-- 09b -->
+<section class="s" data-t="Цены конкурентов">
+  <div class="k">Цены конкурентов</div>
+  <h2>Что продают и почём: <em>цена часа голоса при полном лимите</em></h2>
+  <div class="w"><div class="c">
+  <table>
+    <tr><th style="width:17%">продукт и тариф</th><th class="n1" style="width:10%">$ в месяц</th><th style="padding-left:20px">что входит</th><th class="n1" style="width:13%">$ за час при полном лимите</th></tr>
+    <tr><td><b>Hakko Free</b></td><td class="n1">0</td><td style="padding-left:20px">30 мин звонка в день, без зрения</td><td class="n1">—</td></tr>
+    <tr><td><b>Hakko Pro</b></td><td class="n1">9,99</td><td style="padding-left:20px">120 мин в день (до 60 ч), зрение и реплики по экрану</td><td class="n1">0,17</td></tr>
+    <tr><td><b>Hakko Ultra</b></td><td class="n1">19,99</td><td style="padding-left:20px">звонок без лимита, зрение; сообщения всё равно за кредиты</td><td class="n1">0,33 при 60 ч</td></tr>
+    <tr><td><b>Sidekick Pro</b></td><td class="n1">~10</td><td style="padding-left:20px">90 мин в день (до 45 ч), зрение; бесплатно 10 мин в день, время идёт и в тишине</td><td class="n1">0,22</td></tr>
+    <tr><td><b>Questie Legend</b></td><td class="n1">149,99</td><td style="padding-left:20px">7 500 кредитов ≈ 375 ч</td><td class="n1">0,40</td></tr>
+    <tr><td><b>Questie Champion</b></td><td class="n1">49,99</td><td style="padding-left:20px">1 750 кредитов ≈ 85 ч, HD-зрение, клон голоса</td><td class="n1">0,59</td></tr>
+    <tr><td><b>Questie Adventurer</b></td><td class="n1">19,99</td><td style="padding-left:20px">500 кредитов ≈ 25 ч; каждая авто-реплика — кредит</td><td class="n1">0,80</td></tr>
+    <tr><td><b>Rudy Plus</b></td><td class="n1">9,99</td><td style="padding-left:20px">90 мин в месяц, тишина в звонке тоже считается</td><td class="n1">6,66</td></tr>
+    <tr><td><b>Rudy Starter</b></td><td class="n1">4,99</td><td style="padding-left:20px">30 мин в месяц; докупка 15 мин за $4,99</td><td class="n1">9,98</td></tr>
+    <tr><td><b>OP.GG Agent</b></td><td class="n1">0 / 19,99</td><td style="padding-left:20px">агент и 2 голоса бесплатно с рекламой; голос стримера — $19,99 за каждый</td><td class="n1">—</td></tr>
+    <tr><td><b>N.E.K.O.</b></td><td class="n1">0</td><td style="padding-left:20px">весь ИИ бесплатно, квота не публикуется; рвётся после 90 с тишины</td><td class="n1">0</td></tr>
+    <tr><td><b>Trophi+</b> · <b>GGQ</b></td><td class="n1">9,90 · ~2,8</td><td style="padding-left:20px">текст без голоса, «unlimited» с fair use · коуч LoL с оверлеем</td><td class="n1">—</td></tr>
+    <tr class="pk"><td><b>Мы, план</b></td><td class="n1">6,99</td><td style="padding-left:20px">голос, «посмотри», реплики по событиям; минуты по речи питомца, тишина бесплатна</td><td class="n1">себест. 0,18</td></tr>
+  </table></div></div>
+  <div class="w g3" style="margin-top:0">
+    <div class="c Go"><div class="fx"><b>$0,17</b><div><strong>Hakko Pro при полном лимите</strong><span>= наша себестоимость своего синтеза; держится на своих моделях и том, что лимит почти никто не выбирает</span></div></div></div>
+    <div class="c Li"><div class="fx"><b>~25 ч</b><div><strong>безубыточный лимит у нас</strong><span>$4,65 чистыми / $0,18 в час ≈ 50 мин в день; на Inworld — ~11 ч; с полом сервера при 96 платящих — ~15 ч</span></div></div></div>
+    <div class="c R"><div class="fx"><b>30 → 10</b><div><strong>бесплатных минут в день у Sidekick</strong><span>за 3 месяца; AikoMate урезал кредиты 30 → 5; Trophi: «AI — самая дорогая часть платформы»</span></div></div></div>
+  </div>
+  <div class="src">Цена тарифа, делённая на все часы голоса, которые он даёт за месяц, — нижняя граница цены часа. Hakko, Questie, Rudy, OP.GG, GGQ — по коду клиентов и открытым API 10–11.11; Sidekick Pro ~$10 — по отзывам, на сайте цены нет. Подробно: docs/market/competitors-pricing-2026-11-11.md.</div>
 </section>
 
 <!-- 10 -->
