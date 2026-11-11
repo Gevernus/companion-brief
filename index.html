@@ -239,7 +239,7 @@ ul.tight b{color:var(--ink)}
   <div class="w"><div class="c">
   <table>
     <tr><th style="width:15%">продукт</th><th style="width:22%">масштаб</th><th style="width:28%">хвалят</th><th>ругают</th></tr>
-    <tr class="pk"><td><b>Hakko</b></td><td>Android 1,8 млн, 2,78★</td><td>персонажи; «видит экран — one of the coolest features»</td><td>29 из 100 последних отзывов — про деньги; «credits for every message» (388 «полезно»); ответ ~10 с</td></tr>
+    <tr class="pk"><td><b>Hakko</b></td><td>Android 1,8 млн, 2,78★</td><td>персонажи; «видит экран — one of the coolest features»</td><td>29 из 100 последних отзывов — про деньги; «credits for every message» (388 «полезно»); вживую ответ 4,9 с, в обзорах паузы вырезаны</td></tr>
     <tr><td><b>Questie</b></td><td>Play 5K+, 3,6★</td><td>тихий режим, «Be Silent»</td><td>автоответ стоит кредит — расход втрое выше рекламы</td></tr>
     <tr><td><b>N.E.K.O.</b></td><td>Steam 513 отзывов, 90%; 43 на русском</td><td>бесплатно, русская озвучка, War Thunder</td><td>«болтает без остановки»; голос отваливается через 90 с тишины</td></tr>
     <tr><td><b>Sidekick AI</b></td><td>Steam 22 отзыва, 27%</td><td>—</td><td>«robotic instructions»; время идёт в тишине; из РФ не работает</td></tr>
@@ -272,7 +272,30 @@ ul.tight b{color:var(--ink)}
     <div class="c"><div class="l">Rudy</div><div class="cost">≈ $10<span class="m"> /час</span></div><div class="m" style="margin-top:6px">$4,99 за 30 мин, тишина тоже считается</div></div>
     <div class="c"><div class="l">Sidekick</div><div class="cost">~$10<span class="m"> /мес</span></div><div class="m" style="margin-top:6px">10 мин в день бесплатно</div></div>
   </div>
-  <div class="src">Источники: разбор клиентов и сайтов 10–11.11 (код, документация), задержки «Гены» и Hakko — замер по роликам.</div>
+  <div class="src">Источники: разбор клиентов и сайтов 10–11.11 (код, документация), задержки — замер по записям без монтажа 11.11, слайд «Задержка».</div>
+</section>
+
+
+<!-- задержка -->
+<section class="s" data-t="Задержка">
+  <div class="k">Задержка голоса</div>
+  <h2>От конца фразы до первого звука: <em>быстрее 1,8&nbsp;с на записях без монтажа нет никого</em></h2>
+  <div class="w g2" style="grid-template-columns:1.6fr 1fr">
+    <div class="c"><div class="l" style="margin-bottom:14px">медиана, секунды; записи без монтажа</div><div class="hb">
+      <div class="nm"><b>Мы: цепочка на Flash-Lite</b>расчёт по этапам, живая проверка с Бали 1,59–1,76 с</div><div><div class="bar" data-tip="если не уверены, что фраза кончилась, — ~3 с" style="width:30.0%;background:var(--c-gold)"></div></div><div class="v">1,5–1,8</div>
+      <div class="nm"><b>PUBG Ally</b>всё на ПК игрока; 20 обменов, 1,0–5,7 с</div><div><div class="bar" data-tip="заявлено NVIDIA 1,6 с" style="width:30.0%;background:var(--c-lil)"></div></div><div class="v">1,80</div>
+      <div class="nm"><b>Gemini Live</b>речь в речь, видит экран; 20 обменов, 1,0–3,5 с</div><div><div class="bar" style="width:30.0%;background:var(--c-lil)"></div></div><div class="v">1,80</div>
+      <div class="nm"><b>Sidekick</b>ролик самой компании, всего 3 обмена</div><div><div class="bar" data-tip="заявлено 1–3 с" style="width:35.7%;background:var(--c-lil)"></div></div><div class="v">2,14</div>
+      <div class="nm"><b>Questie</b>21 обмен, 1,8–5,1 с; заявлено «sub-500ms»</div><div><div class="bar" style="width:47.3%;background:var(--c-rose)"></div></div><div class="v">2,84</div>
+      <div class="nm"><b>Grok Rudi (xAI)</b>два живых стрима, 25 обменов</div><div><div class="bar" style="width:48.5%;background:var(--c-rose)"></div></div><div class="v">2,91</div>
+      <div class="nm"><b>«Гена»</b>стрим, 2,7–5,8 с</div><div><div class="bar" style="width:56.7%;background:var(--c-rose)"></div></div><div class="v">3,4</div>
+      <div class="nm"><b>Hakko</b>живой стрим 45 мин, 20 обменов, 3,9–7,0 с</div><div><div class="bar" style="width:81.3%;background:var(--c-hot)"></div></div><div class="v">4,88</div>
+    </div></div>
+    <div class="c Bl"><div class="fx"><b>×6</b><div><strong>Questie медленнее заявленного</strong><span>обещает «sub-500ms», на записях 2,8 с</span></div></div>
+      <div class="fx"><b>0,3 с</b><div><strong>Hakko «быстрый» — после монтажа</strong><span>в обзорах 21 склейка; вживую 4,9 с, а на вторую фразу подряд не реагирует</span></div></div>
+      <div class="fx"><b>~3 с</b><div><strong>наш плохой случай</strong><span>детектор конца фразы не уверен и ждёт 1,2 с — как Questie и Grok</span></div></div></div>
+  </div>
+  <div class="src">Замер 11.11 по публичным стримам и роликам: пауза от фактического конца речи игрока до первого звука ответа, погрешность ±0,3 с, обмены со склейками в медиану не шли. Наши 1,5–1,8 с — сумма этапов (конец фразы 0,23 с, распознавание 0,11, сеть, Flash-Lite 0,82–1,10, синтез 0,30) и живой каскад с Бали 06.11; из России не мерили. Подробно: docs/market/competitors-latency-2026-11-11.md.</div>
 </section>
 
 
