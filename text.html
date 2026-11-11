@@ -66,7 +66,7 @@ li{margin:3px 0}.chart{margin:16px 0;padding:16px;background:var(--card);border-
 <td>Android 1,8 млн установок, 2,78★</td>
 <td>кадр JPEG 1920 px раз в секунду на сервер; модель зрения по их политике своя, но в тарифе Pro 11.11 видна «Gemini 3 Flash [Vision]»; транспорт Tencent TRTC; клон голоса через ElevenLabs; сцены под 6 132 игры</td>
 <td>персонажи; «one of the coolest features» — видит экран</td>
-<td>29 из 100 последних отзывов — про деньги и лимиты; «credits for every message» (388 «полезно»); «AI has no clue» (72 «полезно»); ответ ~10 с со слов обзорщика [замер по ролику]</td>
+<td>29 из 100 последних отзывов — про деньги и лимиты; «credits for every message» (388 «полезно»); «AI has no clue» (72 «полезно»); ответ 4,9 с вживую со слов обзорщика [замер по ролику]</td>
 </tr>
 <tr>
 <td><strong>Questie</strong></td>
@@ -127,7 +127,7 @@ li{margin:3px 0}.chart{margin:16px 0;padding:16px;background:var(--card);border-
 </ul>
 <p><strong>Задержка до первого звука:</strong></p>
 <ul>
-<li>Gemini Live 1,4–2,1 с, «Гена» 2,7–5,8 с, Hakko ~10 с [замеры по роликам]. В смонтированных роликах паузы вырезаны, им не верить.</li>
+<li>Медианы по записям без монтажа (замер 11.11, docs/market/competitors-latency-2026-11-11.md): PUBG Ally и Gemini Live 1,80 с, Sidekick 2,14, Questie 2,84 (заявлено «sub-500ms»), Grok Rudi 2,91, «Гена» 3,4, Hakko 4,88 (живой стрим; «~10 с» было словами обзорщика, в смонтированных роликах — склейки). Наши 1,5–1,8 с считаются тоже от конца фразы (smart-turn 0,23 с входит); плохой случай ~3 с.</li>
 <li>У нас ~1,5–1,8 с на Gemini Flash-Lite [замер 11.11 с Бали; из РФ не мерили].</li>
 <li>Своя LLM на GPU дала бы ~0,9 с [расчёт, не замер] — <code>voice/research-llm-latency-2026-11-11.md</code>.</li>
 </ul>
@@ -575,7 +575,7 @@ li{margin:3px 0}.chart{margin:16px 0;padding:16px;background:var(--card);border-
 <td><strong>Hakko</strong></td>
 <td>звонок через Tencent TRTC, бот на их сервере; перебивание по умолчанию</td>
 <td>не названы, по политике «всё своё LynkSoul»; клон голоса через ElevenLabs [код]</td>
-<td>~10 с в обзоре, вместе со зрением [замер по ролику]</td>
+<td>4,88 с медиана на живом стриме, 3,9–7,0 с [замер 11.11, competitors-latency]; «~10 с» — слова обзорщика, вырезавшего паузы</td>
 <td>бесплатно 30 мин в день; Pro $9,99 — 120 мин в день; Ultra $19,99 — без лимита [код]</td>
 </tr>
 <tr>
