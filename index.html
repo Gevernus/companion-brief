@@ -85,7 +85,7 @@ ul.tight b{color:var(--ink)}
 .mxt td.me,.mxt th.me{background:var(--c-rose);color:var(--c-ink)}.mxt td.me i,.mxt td.me small{color:var(--c-ink)!important;opacity:1}
 .foot{width:1204px;margin-top:40px;font-size:15px;color:var(--mute)}.foot a{color:var(--c-rose)}
 .kpi .kv{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px;font-size:15px;line-height:1.35}.kpi .kv small{display:block;font-size:11px;letter-spacing:.06em;text-transform:uppercase;opacity:.65;margin-bottom:4px}.kpi .kv b{font-weight:700}.kpi .kc{grid-template-columns:auto 1fr}.kpi .kn{margin-top:10px;font-size:13px;opacity:.8}
-</style></head><body>
+.kpi.k3{grid-template-columns:repeat(3,1fr)}.kpm .c{padding:16px 18px 18px}.kpm .kv{font-size:13px;gap:10px;margin-top:8px}.kpm .kv small{font-size:10px}</style></head><body>
 <div id="pan"><span id="num">01</span><div id="pt"></div></div><div id="bar"></div><div id="tip"></div>
 <div id="stage">
 
@@ -95,15 +95,23 @@ ul.tight b{color:var(--ink)}
   <div class="hero" style="font-size:150px">Напарник</div>
   <div class="lead">Голос и комментарии к игре: <span>сколько стоит дёшево, сколько — качественно, как у конкурентов и что делаем в MVP</span></div>
   <div class="mq"><div>голос по-русски ✦ «посмотри» по кнопке ✦ реплики на ачивки и друзей ✦ GSI в CS2 и Dota 2 ✦ касса SB ✦ свой синтез голоса ✦ 13 конкурентов разобрано ✦&nbsp;голос по-русски ✦ «посмотри» по кнопке ✦ реплики на ачивки и друзей ✦ GSI в CS2 и Dota 2 ✦ касса SB ✦ свой синтез голоса ✦ 13 конкурентов разобрано ✦&nbsp;</div></div>
-  <div class="kpi">
+  <div class="kpi k3">
     <div class="c R"><div class="l">дёшево</div><div class="b" style="margin-top:10px;font-size:54px;white-space:nowrap">$2,80<span class="u">/мес</span></div>
       <div class="kv"><div><small>стек</small>распознавание на ПК<br>Gemini Flash-Lite<br>свой синтез TeraTTS<br>кадр по кнопке и событиям</div><div><small>в месяц</small><b>10 ч</b> разговора<br><b>60 ч</b> зрения по событиям, ~30 кадров в час</div></div></div>
     <div class="c Li"><div class="l">качественно</div><div class="b" style="margin-top:10px;font-size:54px;white-space:nowrap">$15,62<span class="u">/мес</span></div>
       <div class="kv"><div><small>стек</small>распознавание на ПК<br>Gemini Flash-Lite<br>ElevenLabs<br>6 кадров раз в 30 с</div><div><small>в месяц</small><b>10 ч</b> разговора<br><b>60 ч</b> зрения, сам комментирует</div></div></div>
-    <div class="c Cr"><div class="l">конкуренты берут</div><div class="b" style="margin-top:10px;font-size:54px;white-space:nowrap">$5–20<span class="u">/мес</span></div>
-      <div class="kv kc"><div><small>тариф</small>Rudy $4,99<br>Hakko $9,99<br>Sidekick ~$10<br>Questie $19,99</div><div><small>потолок звонка · зрение</small><b>30 мин</b>/мес · в звонке<br><b>2 ч</b>/день · есть<br><b>1,5 ч</b>/день · есть<br><b>~25 ч</b>/мес · в звонке</div></div></div>
     <div class="c Go"><div class="l">MVP</div><div class="b" style="margin-top:10px;font-size:54px;white-space:nowrap">$6,99<span class="u">/мес</span></div>
       <div class="kv"><div><small>что входит</small>голос по-русски<br>«посмотри» по кнопке<br>реплики на ачивки, запуск игры, друзей<br>оплата СБП в кассе SB</div><div><small>в месяц</small><b>10 ч</b> разговора<br><b>60 ч</b> зрения по событиям<br>себестоимость <b>$2,80</b>, чистыми <b>$6,64</b></div></div></div>
+  </div>
+  <div class="kpi kpm">
+    <div class="c Cr"><div class="l">конкурент · Rudy</div><div class="b" style="margin-top:6px;font-size:34px;white-space:nowrap">$4,99<span class="u">/мес</span></div>
+      <div class="kv"><div><small>стек</small>Gemini 3 Flash<br>звонок WebRTC<br>экран — показ окна</div><div><small>в месяц</small><b>0,5 ч</b> разговора, тишина тоже списывает<br>зрение только в звонке</div></div></div>
+    <div class="c Cr"><div class="l">конкурент · Hakko</div><div class="b" style="margin-top:6px;font-size:34px;white-space:nowrap">$9,99<span class="u">/мес</span></div>
+      <div class="kv"><div><small>стек</small>свои модели LynkSoul<br>звонок Tencent TRTC<br>1 кадр/с с ПК</div><div><small>в месяц</small><b>до 60 ч</b> разговора, 2 ч в день<br>зрение есть, лимит не публикуют</div></div></div>
+    <div class="c Cr"><div class="l">конкурент · Sidekick</div><div class="b" style="margin-top:6px;font-size:34px;white-space:nowrap">~$10<span class="u">/мес</span></div>
+      <div class="kv"><div><small>стек</small>VLM на сервере<br>детектор изменений на ПК<br>голос не назван</div><div><small>в месяц</small><b>до 45 ч</b>, 1,5 ч в день, таймер с запуска<br>зрение в тех же часах</div></div></div>
+    <div class="c Cr"><div class="l">конкурент · Questie</div><div class="b" style="margin-top:6px;font-size:34px;white-space:nowrap">$19,99<span class="u">/мес</span></div>
+      <div class="kv"><div><small>стек</small>Gemini 2.5 Flash-Lite<br>голос OpenAI nova<br>видео 3 кадра/с</div><div><small>в месяц</small><b>~25 ч</b> разговора<br>зрение только в звонке</div></div></div>
   </div>
   <div class="w c" style="margin-top:0"><div class="l" style="margin-bottom:14px">себестоимость одного платящего в месяц: от дешёвого до «как у Hakko», всегда со зрением — и сколько остаётся с тарифа</div>
     <div class="hb">
