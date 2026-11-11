@@ -84,6 +84,7 @@ ul.tight b{color:var(--ink)}
 .lg i{font-style:normal;font-weight:800;margin-right:4px}
 .mxt td.me,.mxt th.me{background:var(--c-rose);color:var(--c-ink)}.mxt td.me i,.mxt td.me small{color:var(--c-ink)!important;opacity:1}
 .foot{width:1204px;margin-top:40px;font-size:15px;color:var(--mute)}.foot a{color:var(--c-rose)}
+.kpi .kv{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px;font-size:15px;line-height:1.35}.kpi .kv small{display:block;font-size:11px;letter-spacing:.06em;text-transform:uppercase;opacity:.65;margin-bottom:4px}.kpi .kv b{font-weight:700}.kpi .kc{grid-template-columns:auto 1fr}.kpi .kn{margin-top:10px;font-size:13px;opacity:.8}
 </style></head><body>
 <div id="pan"><span id="num">01</span><div id="pt"></div></div><div id="bar"></div><div id="tip"></div>
 <div id="stage">
@@ -95,10 +96,14 @@ ul.tight b{color:var(--ink)}
   <div class="lead">Голос и комментарии к игре: <span>сколько стоит дёшево, сколько — качественно, как у конкурентов и что делаем в MVP</span></div>
   <div class="mq"><div>голос по-русски ✦ «посмотри» по кнопке ✦ реплики по событиям Steam ✦ GSI в CS2 и Dota 2 ✦ касса SB ✦ свой синтез голоса ✦ 13 конкурентов разобрано ✦&nbsp;голос по-русски ✦ «посмотри» по кнопке ✦ реплики по событиям Steam ✦ GSI в CS2 и Dota 2 ✦ касса SB ✦ свой синтез голоса ✦ 13 конкурентов разобрано ✦&nbsp;</div></div>
   <div class="kpi">
-    <div class="c R"><div class="l">дёшево</div><div class="b" style="margin-top:10px;font-size:54px;white-space:nowrap">$1,60<span class="u">/мес</span></div><div class="t2" style="margin-top:8px">себестоимость платящего: 10 ч разговора, распознавание на ПК, Gemini Flash-Lite, свой синтез; с «посмотри» и событиями — $2,80</div></div>
-    <div class="c Li"><div class="l">качественно</div><div class="b" style="margin-top:10px;font-size:54px;white-space:nowrap">$15,62<span class="u">/мес</span></div><div class="t2" style="margin-top:8px">себестоимость платящего: голос ElevenLabs и сам комментирует 60 ч игры, как Hakko; без комментариев — $11,92</div></div>
-    <div class="c Cr"><div class="l">конкуренты берут</div><div class="b" style="margin-top:10px;font-size:54px;white-space:nowrap">$5–20<span class="u">/мес</span></div><div class="t2" style="margin-top:8px">Rudy $4,99 (30 мин в месяц) · Hakko $9,99 (2 ч в день) и $19,99 · Sidekick ~$10 · Questie от $19,99</div></div>
-    <div class="c Go"><div class="l">MVP</div><div class="b" style="margin-top:10px;font-size:54px;white-space:nowrap">$6,99<span class="u">/мес</span></div><div class="t2" style="margin-top:8px">цена для игрока: голос, «посмотри» и реплики по событиям Steam; себестоимость $2,80, чистыми $4,65; СБП в кассе SB</div></div>
+    <div class="c R"><div class="l">дёшево</div><div class="b" style="margin-top:10px;font-size:54px;white-space:nowrap">$1,60<span class="u">/мес</span></div>
+      <div class="kv"><div><small>стек</small>распознавание на ПК<br>Gemini Flash-Lite<br>свой синтез TeraTTS</div><div><small>в месяц</small><b>10 ч</b> разговора<br><b>0 ч</b> зрения</div></div><div class="t2 kn">себестоимость платящего; с «посмотри» и событиями — $2,80</div></div>
+    <div class="c Li"><div class="l">качественно</div><div class="b" style="margin-top:10px;font-size:54px;white-space:nowrap">$15,62<span class="u">/мес</span></div>
+      <div class="kv"><div><small>стек</small>распознавание на ПК<br>Gemini Flash-Lite<br>ElevenLabs<br>6 кадров раз в 30 с</div><div><small>в месяц</small><b>10 ч</b> разговора<br><b>60 ч</b> зрения, сам комментирует</div></div><div class="t2 kn">себестоимость платящего; без комментариев — $11,92</div></div>
+    <div class="c Cr"><div class="l">конкуренты берут</div><div class="b" style="margin-top:10px;font-size:54px;white-space:nowrap">$5–20<span class="u">/мес</span></div>
+      <div class="kv kc"><div><small>тариф</small>Rudy $4,99<br>Hakko $9,99<br>Sidekick ~$10<br>Questie $19,99</div><div><small>разговор · зрение</small><b>0,5 ч</b> · в звонке<br><b>до 60 ч</b> · есть<br><b>до 45 ч</b> · есть<br><b>~25 ч</b> · в звонке</div></div></div>
+    <div class="c Go"><div class="l">MVP</div><div class="b" style="margin-top:10px;font-size:54px;white-space:nowrap">$6,99<span class="u">/мес</span></div>
+      <div class="kv"><div><small>стек</small>распознавание на ПК<br>Gemini Flash-Lite<br>свой синтез TeraTTS<br>кадр по кнопке и событиям</div><div><small>в месяц</small><b>10 ч</b> разговора<br><b>60 ч</b> игры: ~30 кадров в час по событиям</div></div><div class="t2 kn">цена для игрока; себестоимость $2,80, чистыми $4,65</div></div>
   </div>
   <div class="w c" style="margin-top:0"><div class="l" style="margin-bottom:14px">себестоимость одного платящего в месяц: от минимума до «как у Hakko» — и сколько остаётся с тарифа</div>
     <div class="hb">
